@@ -96,7 +96,7 @@ private extension StringLiteralExprSyntax {
       hashCount == 0
       ? self.closingQuote.with(\.trailingTrivia, closingPounds?.trailingTrivia ?? self.closingQuote.trailingTrivia)
       : self.closingQuote.with(\.trailingTrivia, [])
-    
+
     let segments = StringLiteralSegmentListSyntax(
       self.segments.map { segment in
         if case let .expressionSegment(expressionSegment) = segment {
